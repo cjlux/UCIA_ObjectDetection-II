@@ -1,0 +1,17 @@
+path: /home/jlc/work/JLC-AE/Projets/UCIA-II/UCIA_ObjectDetection/yolo_split_dataset
+
+train: train/images
+val: val/images
+test: test/images
+
+nc: 9
+names:
+  - ball
+  - cube
+  - hexagon
+  - leftPanel
+  - leftTurn
+  - nest
+  - rightTurn
+  - star
+  - triangle
