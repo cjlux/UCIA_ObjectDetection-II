@@ -10,12 +10,13 @@ import sys
 
 def main(VER):
 
-    BATCH = {'v1.0': (4, 8, 16, 32),}
-    EPOCH = (40, 80, 120, 160)
+    BATCH = (4, 8, 16, 32)
+    EPOCH = (40, 80, 120, 160, 180, 200)
 
     model_dir = Path('./Training/YOLO-pretrained')
 
-    data_path = {'v1.0': "./datasets/V1.0_yolo8_48train-8val-4test/data.yaml",}
+    data_path = {'v1.0': "./datasets/V1.0_yolo8_48train-8val-4test/data.yaml",
+			     'v1.1': "./datasets/V1.0_yolo8_97train-12val-4test/data.yaml",}
 
     yolo = 'YOLOv8s'
     yolo_weights = model_dir / f'{yolo.lower()}.pt'
@@ -37,7 +38,7 @@ def main(VER):
     F_out = open(results_file, "w", encoding="utf8")
     F_out.write(header)
         
-    for batch in BATCH[VER]:
+    for batch in BATCH:
         for epoch in EPOCH:
             project = f'Training/YOLO-trained-{VER}/UCIA-II-{yolo}' 
             name = f'batch-{batch:02d}_epo-{epoch:03d}'
