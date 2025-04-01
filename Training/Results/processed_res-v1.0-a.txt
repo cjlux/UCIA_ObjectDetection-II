@@ -1,0 +1,23 @@
+**************************************************
+* Sort by 'recall' & 'mAP50-95'
+**************************************************
+
+File <Training/Results/results_yolov8s-v1.0.txt>
+	Max values -> "max_recall": 0.981, "max_mAP50-90": 0.822
+        #meta-params  recall  mAP50-95  fitness
+11  batch-16_epo-160   0.981     0.822    0.836
+8   batch-16_epo-040   0.981     0.817    0.833
+7   batch-08_epo-160   0.972     0.828    0.842
+4   batch-08_epo-040   0.970     0.765    0.781
+
+**************************************************
+* Sort by 'fitness'
+**************************************************
+
+File <Training/Results/results_yolov8s-v1.0.txt>
+	Max values -> "fitness": 0.845
+        #meta-params  recall  mAP50-95  fitness
+14  batch-32_epo-120   0.960     0.830    0.845
+6   batch-08_epo-120   0.951     0.830    0.843
+7   batch-08_epo-160   0.972     0.828    0.842
+2   batch-04_epo-120   0.965     0.827    0.841

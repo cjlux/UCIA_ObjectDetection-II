@@ -8,9 +8,9 @@ patience: 100
 batch: 4
 imgsz: 640
 save: true
-save_period: -1
+save_period: 20
 cache: false
-device: null
+device: 0
 workers: 0
 project: Training/YOLO-trained-V1/UCIA-II-YOLOv8s
 name: batch-04_epo-120
@@ -30,7 +30,7 @@ fraction: 1.0
 profile: false
 freeze: null
 multi_scale: false
-overlap_mask: true
+overlap_mask: false
 mask_ratio: 4
 dropout: 0.0
 val: true

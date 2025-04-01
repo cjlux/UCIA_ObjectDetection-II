@@ -1,4 +1,4 @@
-path: /home/jlc/work/JLC-AE/Projets/UCIA-II/UCIA_ObjectDetection/yolo_split_dataset
+path: /home/jlc/work/JLC-AE/Projets/UCIA/UCIA_ObjectDetection-II/yolo_split_dataset
 
 train: train/images
 val: val/images

@@ -1,6 +1,6 @@
 ######################################
 #   Jean-Luc.Charles@mailo.com
-#   2024/12/18 - v1.1
+#   2025/03/25 - v1.2
 ######################################
 
 from pathlib import Path
@@ -13,38 +13,42 @@ from time import sleep
 
 def main(VER):
 
-    BATCH = {'V1': (4, 8, 16, 32)}
-    EPOCH = (40, 80, 120)
+    BATCH = (4, 8, 16, 32)
+    EPOCH = (40, 80, 120, 160, 180, 200)
 
     model_dir = Path('./Training/YOLO-pretrained')
 
-    data_path = {'V1': "./yolo_split_dataset/data.yaml" }
+    data_path = {'v1.0': "./datasets/V1.0_yolo8_48train-8val-4test/data.yaml",
+			     'v1.1': "./datasets/V1.0_yolo8_97train-12val-4test/data.yaml",}
 
     yolo = 'YOLOv8s'
-    yolo_weights = yolo.lower() + '.pt'
+    yolo_weights = model_dir / f'{yolo.lower()}.pt'
 
-    for batch in BATCH[VER]:
+    for batch in BATCH:
         for epoch in EPOCH:
             project = f'Training/YOLO-trained-{VER}/UCIA-II-{yolo}' 
             name = f'batch-{batch:02d}_epo-{epoch:03d}'
-
             best = Path(project, name, 'weights', 'best.pt')
             print(f'{best}')
-            if not best.exists(): 
+
+            if not best.exists(): 	
                 model = YOLO(model_dir / yolo_weights)  # load a pretrained model 
                 model.train(data=data_path[VER], 
                             epochs=epoch, 
                             imgsz=640, 
                             batch=batch, 
-                            patience=100, 
+                            patience=100,
                             cache=False,
-                            workers=0,
+                            workers=0,			# no parallesiation for loading data
                             project=project, 
                             name=name, 
                             exist_ok=True, 
                             pretrained=True,
                             optimizer='auto', 
-                            seed=1234)
+                            seed=1234,
+                            deterministic=True, # force using deterministic algorithms
+                            overlap_mask=False) # whether object masks should be merged into a single mask for training 
+												# or kept separate for each object.
 
             '''
             print(f'looking for <best.onnx>... ')            
@@ -68,8 +72,8 @@ if __name__ == "__main__":
 
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument('-v', '--version', action="store", dest='version', 
-                        required=True, help="Work version: 'V1', 'V2' or 'V2.1'")
+    parser.add_argument('-V', '--version', action="store", dest='version', 
+                        required=True, help="dataset version: 'v1.0', 'v1.1' or 'v2.0...'")
     
     args = parser.parse_args()
     version = args.version

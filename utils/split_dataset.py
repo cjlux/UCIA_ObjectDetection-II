@@ -1,6 +1,7 @@
 import os
 import shutil
 import random
+from PIL import Image
 
 # 📂 Directories
 dataset_dir = "./dataset"
@@ -41,6 +42,10 @@ for split, files in splits.items():
         img_src = os.path.join(images_dir, img_file)
         label_src = os.path.join(labels_dir, label_file)
 
+        # convert image to gret scale
+        img = Image.open(img_src).convert('L')
+        img.save(img_src)
+		
         img_dst = os.path.join(output_dir, split, "images", img_file)
         label_dst = os.path.join(output_dir, split, "labels", label_file)
 

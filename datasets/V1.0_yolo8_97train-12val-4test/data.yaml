@@ -1,0 +1,14 @@
+path: /home/jlc/work/JLC-AE/Projets/UCIA/UCIA_ObjectDetection-II/datasets/V1.0_yolo8_97train-12val-4test/
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 16
+names: ['Parking', 'ball', 'cube', 'cylinder', 'hexagon', 'home', 'laneLeft', 'laneRight', 'leftTurn', 'lineStraight', 'nest', 'rightTurn', 'star', 'stop', 'triangle', 'zebra']
+
+roboflow:
+  workspace: ucia
+  project: ucia-ia-ii
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/ucia/ucia-ia-ii/dataset/2
