@@ -50,7 +50,7 @@ def main(VER):
             if best.exists(): 
                 model = YOLO(best)  # load a pretrained model 
                 # Validate the model
-                metrics = model.val(batch=batch, imgsz=640, data=data_path[VER], workers=0)  
+                metrics = model.val(batch=batch, imgsz=640, data=data_path[VER], workers=10)  
                 F_out.write(f'{name}')
                 for key in metrics.speed:
                     F_out.write(f'\t{metrics.speed[key]:.2f}')

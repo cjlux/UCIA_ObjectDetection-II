@@ -8,5 +8,8 @@ dependencies = [
     "label-studio>=1.16.0",
     "labelimg>=1.8.6",
     "marimo>=0.12.9",
+    "onnx>=1.17.0",
+    "onnxruntime>=1.21.0",
+    "pathlib>=1.0.1",
     "ultralytics>=8.3.94",
 ]
