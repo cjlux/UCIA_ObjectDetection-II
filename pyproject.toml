@@ -7,5 +7,6 @@ requires-python = ">=3.12"
 dependencies = [
     "label-studio>=1.16.0",
     "labelimg>=1.8.6",
+    "marimo>=0.12.9",
     "ultralytics>=8.3.94",
 ]
