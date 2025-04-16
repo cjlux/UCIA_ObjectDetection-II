@@ -20,7 +20,9 @@ def main(VER):
 
     data_path = {'v1.0': "./datasets/V1.0_yolo8_48train-8val-4test/data.yaml",
 			     'v1.1': "./datasets/V1.0_yolo8_97train-12val-4test/data.yaml",
-			     'v1.2': "./datasets/V1.0_yolo8_166train-24val-13test/data.yaml",}
+			     'v1.2': "./datasets/V1.0_yolo8_166train-24val-13test/data.yaml",
+   			     'v1.3': "./datasets/V1.1_yolo8_166train-24val-13test/data.yaml",
+                 }
 
     yolo = 'YOLOv8s'
     yolo_weights = model_dir / f'{yolo.lower()}.pt'
