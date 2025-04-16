@@ -65,7 +65,7 @@ if __name__ == '__main__':
 	parser.add_argument('-i', '--image', action="store", dest='image', 
 		required=True, help="image path")
 	parser.add_argument('-v', '--version', action="store", dest='version', 
-		required=False, default='v1.0', help="'v1.0' ou 'v1.1...'")
+		required=False, default='v1.3', help="'v1.0' ou 'v1.1...'")
 	parser.add_argument('-b', '--batch', action="store", dest='batch', 
 		required=False, type=int, default='4', help="2, 4, 8, 16, ou 32")
 	parser.add_argument('-e', '--epochs', action="store", dest='epochs', 
@@ -92,8 +92,7 @@ if __name__ == '__main__':
 	
 	yolo_weights_path  = f'Training/YOLO-trained-{version}/UCIA-II-YOLOv8s/'
 	yolo_weights_path += f'batch-{batch:02d}_epo-{epochs:03d}/weights/best.pt'
-	#rep = input(f'Utiliser le réseau {yolo_weights_path} [Oui]/Non ? ')
-	rep = 'o'
+	rep = input(f'Utiliser le réseau {yolo_weights_path} [Oui]/Non ? ')
 	
 	if rep.lower() in ('', 'o', 'oui', 'y', 'yes'):
 		yolo_weights = Path(yolo_weights_path)
