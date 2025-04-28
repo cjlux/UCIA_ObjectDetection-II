@@ -1,0 +1,27 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Project
+*.pt
+*.onnx
+*.bin
+*.tgz
+*.tar
+*.swp
+*.torchscript
+last.pt
+weights/
+runs/
+Sandbox/
+yolo_split_dataset/
+.~loc*
+Admin/
+

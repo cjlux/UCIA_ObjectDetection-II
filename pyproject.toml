@@ -1,0 +1,16 @@
+[project]
+name = "ucia-objectdetection-ii"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "labelimg>=1.8.6",
+    "ncnn>=1.0.20241226",
+    "onnx>=1.17.0",
+    "onnxruntime>=1.21.1",
+    "onnxruntime-gpu>=1.21.1",
+    "onnxslim>=0.1.50",
+    "pnnx>=20250403",
+    "ultralytics>=8.3.113",
+]
