@@ -1,3 +1,4 @@
+path: /home/jlc/work/JLC-AE/Projets/UCIA/UCIA_ObjectDetection-II/datasets/V1.0-yolo8_280train-72val-15test
 train: ../train/images
 val: ../valid/images
 test: ../test/images
