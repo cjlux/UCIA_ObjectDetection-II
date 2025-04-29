@@ -13,17 +13,26 @@ def main(VER, timeStamp=''):
     BATCH = {'v1.3': (4, 8, 16, 32),
              'v1.4': (4, 8, 16, 20, 30, 40),
              'v1.5': (4, 8, 16, 20, 30, 40),
-             'v1.6': (4, 8, 16, 20, 30, 40),}
+             'v1.6': (4, 8, 16, 20, 30, 40),
+             'v1.7': (4, 8, 16, 20, 30, 40),
+             'v1.8': (4, 8, 16, 20, 30, 40),
+             }
     
     EPOCH = {'v1.3': (40, 80, 120, 160, 200),
              'v1.4': (80, 120, 160, 200, 240, 300),
              'v1.5': (80, 120, 160, 200, 240, 300, 400, 500),
-             'v1.6': (80, 120, 160, 200, 240, 300),}
-
+             'v1.6': (80, 120, 160, 200, 240, 300),
+             'v1.7': (80, 120, 160, 200, 240, 300),
+             'v1.8': (80, 120, 160, 200, 240, 300),
+             }
+    
     data_path = {'v1.3': "./datasets/V1.1_yolo8_166train-24val-13test/data.yaml",
                  'v1.4': "./datasets/V1.0_yolo8_162train-27val-13test/data.yaml",
                  'v1.5': "./datasets/V1.1_yolo8_247train-85val-0test/data.yaml",
-                 'v1.6': "./datasets/V1.0_yolo8_248train-84val-0test/data.yaml",}
+                 'v1.6': "./datasets/V1.0_yolo8_248train-84val-0test/data.yaml",
+                 'v1.7': "./datasets/V1.0_yolo8_280train-72val-15test/data.yaml",
+                 'v1.8': "./datasets/V1.0_yolo8_296train-67val-23test/data.yaml",
+                 }
 
     yolo = 'YOLOv8n'
 
@@ -61,7 +70,7 @@ def main(VER, timeStamp=''):
                                     imgsz=640, 
                                     data=data_path[VER], 
                                     workers=0,
-                                    conf=0.5,
+                                    conf=0.3,
                                     max_det=15,
                                     save_crop=True,
                                     plots=True,

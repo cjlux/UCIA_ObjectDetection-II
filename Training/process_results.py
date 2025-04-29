@@ -1,6 +1,6 @@
 ######################################
 #   Jean-Luc.Charles@mailo.com
-#   2025/04/28 - v1.2
+#   2025/04/28 - v1.3
 ######################################
 
 import pandas as pd
@@ -26,7 +26,32 @@ def main(VER:str, timeStamp:str=None):
         print(mess)
         stream_out.write(mess)
 
-        mess = 50*'*' + "\n* Sort by 'recall' & 'mAP50-95'\n" + 50*'*' 
+        ##############################################################
+        mess = '\n' + 50*'*' + "\n* Sort by 'mAP50'\n" + 50*'*'
+        print(mess)
+        stream_out.write(mess+'\n')
+        
+        # read CSV file with panda:
+        df = pd.read_csv(txt_file, sep='\t', header=0, skiprows=[1])
+        # now sort rows by descending order of column "fitnes":
+        df = df.sort_values(by=["mAP50"], ascending=False)
+        # the first values in column "fitness" is the max values
+        max_mAP50 = df['mAP50'].values[0]
+
+        mess = f'\tMax values -> "mAP50": {max_mAP50}'
+        print(mess)
+        stream_out.write(mess+'\n')
+        
+        # selected  significant columns
+        df1 = df[['#meta-params', 'recall', 'mAP50', 'mAP50-95', 'fitness']]
+        
+        # print the first 4 rows:
+        mess = df1.head(4)
+        print(mess)
+        stream_out.write(str(mess)+'\n')
+
+        #################################################################
+        mess = '\n' + 50*'*' + "\n* Sort by 'recall' & 'mAP50-95'\n" + 50*'*' 
         print(mess)
         stream_out.write(mess+'\n')   
 
@@ -43,13 +68,14 @@ def main(VER:str, timeStamp:str=None):
         stream_out.write(mess+'\n')
         
         # selected  significant columns
-        df1 = df[['#meta-params', 'recall', 'mAP50-95', 'fitness']]
+        df2 = df[['#meta-params', 'recall', 'mAP50', 'mAP50-95', 'fitness']]
         
         # print the first 4 rows:
-        mess = df1.head(4)
+        mess = df2.head(4)
         print(mess)
         stream_out.write(str(mess)+'\n')
             
+        ##############################################################
         mess = '\n' + 50*'*' + "\n* Sort by 'fitness'\n" + 50*'*'
         print(mess)
         stream_out.write(mess+'\n')   
@@ -66,10 +92,10 @@ def main(VER:str, timeStamp:str=None):
         stream_out.write(mess+'\n')
         
         # selected  significant columns
-        df2 = df[['#meta-params', 'recall', 'mAP50-95', 'fitness']]
+        df3 = df[['#meta-params', 'recall', 'mAP50', 'mAP50-95', 'fitness']]
         
         # print the first 4 rows:
-        mess = df2.head(4)
+        mess = df3.head(4)
         print(mess)
         stream_out.write(str(mess)+'\n')
 

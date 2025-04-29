@@ -1,4 +1,4 @@
-VER = 'v1.6'
+VER = 'v1.8'
 weights_path = YOLO-trained-${VER}/UCIA-II-YOLOv8n/
 
 weights: ncnn
