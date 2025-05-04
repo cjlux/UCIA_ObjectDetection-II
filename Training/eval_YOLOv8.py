@@ -74,7 +74,7 @@ def main(VER, timeStamp=''):
                                     max_det=15,
                                     save_crop=True,
                                     plots=True,
-                                    name=name)    
+                                    name=f'{VER}_{name}')    
                 
                 F_out.write(f'{name}')
                 for key in metrics.speed:
