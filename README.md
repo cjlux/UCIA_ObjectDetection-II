@@ -13,5 +13,8 @@ L'étude UCIA-II permet d'aller plus loin :
 - reconaissnce des objets _virage_gauche_, _virage_droi_, _piste_droite_  formé par la piste noire,
 - détection de symboles imprimés : _passage piéton_, _panneau STOP_, _spirale_, _cocarde_...
 
-Le but de l'étude UCIA-II est d'entraîner le réseau __yolov8n__ à détecter et reconnaître un lus grand nombre d'objets de façon à pouvoir alimenter une plus grande diversité d'algotithmes de pilotage du robot Thymio.
+Le but de l'étude UCIA-II est d'entraîner le réseau __yolov8n__ à détecter et reconnaître un plus grand nombre d'objets de façon à pouvoir alimenter une plus grande diversité d'algotithmes de pilotage du robot Thymio.
+
+Le rapport __UCIA-IA-DetectionObj-II_V1.0.pdf__ du dossier __Doc__ donne plus de détails sur le déroulé de l'étude.
+
 
