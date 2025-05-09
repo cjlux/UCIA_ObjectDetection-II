@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Détection objet
+Comment=Pilotage du robot Thymio par réseau YOLO.
+Exec=lxterminal -e '/home/ucia/UCIA/UCIA_ObjectDetection/bin/start_thymio_detection.sh'
+Icon=/home/ucia/UCIA/UCIA_ObjectDetection/bin/AI.pixmap
+Terminal=true
+Type=Application
+Categories=Application;Development;
+StartupNotify=true
+Name[fr_FR]=DriveThymio.desktop
+X-KeepTerminal=true
+Path=/home/ucia/UCIA/UCIA_ObjectDetection
+GenericName=Pilotage du robot Thymio par réseau YOLO.

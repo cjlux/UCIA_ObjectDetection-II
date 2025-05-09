@@ -17,11 +17,13 @@ wheels/
 *.tar
 *.swp
 *.torchscript
+*.pyc
 last.pt
 weights/
+.~loc*
+Admin/
 runs/
 Sandbox/
 yolo_split_dataset/
-.~loc*
-Admin/
-
+RPi4_v3.0/ucia/UCIA/vision/
+trash/
