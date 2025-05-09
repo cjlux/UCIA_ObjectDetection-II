@@ -1,0 +1,237 @@
+   62  systemctl status vncserver-x11-serviced.service 
+   87  iwconfig
+   89  systemctl status hostapd.service
+  122  pip install simplejpeg
+  192  pip install streamlit
+  193  pip install idlex
+  194  idlex
+  196  cd UCIA/UCIA_ObjectDetection/
+  276  unzip -l rpi3-hotspot.zip 
+  283  cat install.sh 
+  284  cat README.md 
+  285  sudo -s
+  299  sudo systemctl status rpi-access-point
+  300  sudo apt install iptables
+  301  sudo systemctl status rpi-access-point
+  302  sudo systemctl stop rpi-access-point
+  303  sudo systemctl status rpi-access-point
+  304  ifconfig eth0
+  305  cat /etc/networks 
+  306  cat /etc/network/interfaces 
+  307  sudo vim /etc/network/interfaces 
+  308  sudo vim /etc/dhcpcd.conf 
+  311  service --status-all
+  312  sudo systemctl stop dnsmasq
+  313  service --status-all
+  319  sudo systemctl enable networking
+  320  sudo systemctl list
+  321  sudo systemctl -h
+  322  sudo systemctl list-unit
+  323  sudo systemctl list-units
+  326  sudo systemctl status NetworkManager
+  327  sudo systemctl restart NetworkManager
+  328  sudo systemctl status NetworkManager
+  332  sudo ifconfig eth0 up 192.168.1.17
+  334  sudo apt install iptables
+  338  sudo systemctl status rpi-access-point
+  339  sudo apt install ifup
+  340  sudo apt install ifupdown
+  342  sudo systemctl restart rpi-access-point
+  343  sudo systemctl status rpi-access-point
+  348  python take_image.py 
+  349  sudo nmtui
+  350  cd
+  351  cd HOTSPOT/
+  354  cd rpi3-hotspot/
+  356  cat README.md 
+  357  sudo systemctl stop rpi-access-point
+  358  sudo systemctl disable rpi-access-point
+  359  sudo rm /etc/systemd/system/rpi-access-point.service /usr/bin/rpi-access-point
+  360  sudo systemctl daemon-reload
+  361  sudo apt install networkmanager
+  362  dpkg -l |grep net
+  366  sudo apt reinstall network-manager
+  367  route -n
+  374  sudo ifconfig eth0 up 192.168.1.17
+  383  sudo route add -net 0.0.0.0 gw 192.168.1.1
+  390  sudo apt purge network-manager
+  392  sudo rm -rf /etc/NetworkManager/system-connections
+  393  sudo apt install network-manager
+  396  sudo apt purge hostapd
+  397  sudo rm -rf /etc/hostapd/
+  398  sudo apt purge dnsq
+  462  vim interfaces 
+  463  cd ..
+  464  vim install.sh 
+  468  sudo apt purge network-manager
+  469  vim install.sh 
+  478  cat boot/hotspot.txt.example 
+  479  sudo vim /boot/hotspot.txt 
+  481  vim install.sh 
+  482  sudo ./install.sh 
+  483  systemctl status dnsmasq
+  485  systemctl status dhcpcd
+  487  systemctl status rpi-access-point
+  489  ifconfig 
+  498  sudo ifconfig eth0 up 192.168.1.17
+  504  sudo apt reinstall python3-picamera2
+  505  rpicam-hello --width 640 --height 640
+  512  sudo apt purge network-manager
+  515  sudo rm -rf /etc/NetworkManager
+  533  streamlit run inf_camera-3.py --server.headless 1
+  540  cd UCIA/UCIA_ObjectDetection/
+  541  streamlit run inf_camera-3.py 
+  542  vim inf_camera-3.py 
+  543  ls
+  544  vim server-obj-detection.py 
+  545  vim server.py 
+  546  python server.py 
+  547  ls -lrt
+  548  vim inf_camera-3.py 
+  549  streamlit run inf_camera-3.py 
+  550  sudo ifconfig eth0 up 192.168.1.17
+  553  sudo route add -net 0.0.0.0 gw 192.168.1.1
+  556  cd UCIA/UCIA_ObjectDetection/
+  557  streamlit run inf_camera-3.py 
+  558  cd UCIA/UCIA_ObjectDetection/
+  559  vim inf_camera-3.py 
+  560  streamlit run inf_camera-3.py 
+  569  streamlit run inf_camera-3.py --server.headless 1
+  573  streamlit run inf_camera-3.py 2> /dev/null
+  578  sudo apt install python3-opencv python3-flask python3-picamera2
+  579  sudo apt install python3-flask python3-picamera2
+  608  python inf_camera-3.py -v V1 -b 8 1> /dev/null
+  609  python test_flack.py 
+  610  vim index.html
+  611  python test_flack.py 
+  612  cat index.html 
+  613  python test_flack.py 
+  614  mkdir templates
+  615  mv index.html templates/
+  616  python test_flack.py 
+  617  python inf_camera-3.py -v V1 -b
+  618  python inf_camera-3.py -v V1 -b 2
+  619  python inf_camera-3.py -v V1 -b 8
+  620  python inf_camera-3.py -v V1 -y 11n -b 2
+  621  python inf_camera-3.py 
+  622  cd UCIA/UCIA_ObjectDetection/
+  623  python inf_camera-3.py 
+  624  vim inf_camera-3.py 
+  625  python inf_camera-3.py 
+  626  python inf_camera-3.py  -h
+  627  python inf_camera-3.py 
+  628  python inf_camera-3.py -u 11n -b 2
+  629  python inf_camera-3.py -y 11n -b 2
+  654  python inf_camera-2.py -v V2
+  655  python inf_camera-2.py -v V2 -b 4 -e 100
+  656  python inf_camera-2.py -v V2 -b 4 -e 20
+  657  python inf_camera-2.py -v V2 -b 32 -e 20
+  658  python inf_camera-2.py -v V1 -b 4 -e 20
+  659  python inf_camera-2.py -v V1 -y 11n -b 4 -e 20
+  660  python inf_camera-2.py -v V1 -y 11s -b 8 -e 20
+  661  python inf_camera-2.py -v V1
+  662  python inf_camera-2.py -v V1 -y 11s -b 8 -e 20
+  663  python inf_camera-2.py -v V2 -y 8n -b 8 -e 100
+  664  python inf_camera-2.py -v V2 -y v8n -b 8 -e 100
+  665  python inf_camera-2.py -v V2 -y v8s -b 8 -e 100
+  666  python inf_camera-2.py -v V2 -y v8s -b 4 -e 100
+  667  python inf_camera-2.py -v V2 -y v8s -b 16 -e 100
+  668  python inf_camera-2.py -v V2 -y v8s -b 16 -e 20
+  669  python inf_camera-2.py -v V2 -y v8s -b 32 -e 20
+  670  python inf_camera-2.py -v V2 -y v8s -b 32 -e 40
+  671  python inf_camera-2.py -v V2 -y v8s -b 32 -e 60
+  672  python inf_camera-2.py -v V2 -y v8s -b 32 -e 80
+  673  python inf_camera-2.py -v V2 -y v8s -b 32 -e 100
+  674  python inf_camera-2.py -v V2 -y v8n -b 32 -e 100
+  675  python inf_camera-2.py -v V2 -y v8n -b 32 -e 80
+  676  python inf_camera-2.py -v V2 -y v8n -b 32 -e 60
+  677  python inf_camera-2.py -v V2 -y v8n -b 32 -e 40
+  678  python inf_camera-2.py -v V2 -y v8n -b 32 -e 20
+  679  python inf_camera-2.py -v V2 -y v8n -b 16 -e 20
+  680  python inf_camera-2.py -v V2 -y v8n -b 8 -e 20
+  681  python inf_camera-2.py -v V2 -y v8n -b 4 -e 20
+  682  python inf_camera-2.py -v V2 -y v8s -b 8 -e 20
+  683  python inf_camera-2.py -v V2 -y v8s -b 8 -e 40
+  684  python inf_camera-2.py -v V2 -y 11n -b 8 -e 40
+  685  python inf_camera-2.py -v V2 -y 11n -b 4 -e 20 
+  686  python inf_camera-2.py -v V2 -y 11n -b 4 -e 40
+  687  python inf_camera-2.py -v V2 -y 11n -b 4 -e 60
+  688  python inf_camera-2.py -v V2 -y 11n -b 4 -e 80
+  689  python inf_camera-2.py -v V2 -y 11n -b 4 -e 100
+  690  python inf_camera-2.py -v V2 -y 11s -b 4 -e 100
+  691  python inf_camera-2.py -v V2 -y 11s -b 4 -e 20
+  692  python inf_camera-2.py -v V1 -y 11s -b 4 -e 20
+  693  python inf_camera-2.py -v V1 -y 11s -b 8 -e 20
+  694  python inf_camera-2.py -v V1 -y v8n -b 8 -e 20
+  695  python inf_camera-2.py -v V1 -y v8n -b 8 -e 80
+  696  python inf_camera-2.py -v V1 -y v8n -b 8 -e 60
+  697  python inf_camera-2.py -v V1 -y v8n -b 8 -e 40
+  698  python inf_camera-2.py -v V1 -y v8n -b 4 -e 40
+  699  python inf_camera-2.py -v V1 -y v8n -b 2 -e 40
+  700  ls 
+  703  python inf_camera-2.py -v V1 -y v8n -b 8 -e 40
+  742  cat Desktop/DetectObj.desktop 
+  744  ls -l /home/ucia/UCIA/UCIA_ObjectDetection/bin/start_object_detection.sh
+  745  ls -l /home/ucia/UCIA/UCIA_ObjectDetection/
+  752  cat start_object_detection.sh 
+  754  ls -l .config/
+  755  ls -l .config/lxsession/
+  756  ls -l .config/lxsession/LXDE-pi/
+  757  cat .config/lxsession/LXDE-pi/desktop.conf 
+  758  vim .config/lxsession/LXDE-pi/autostart
+  759  ls -l .config/lxsession/LXDE-pi/autostart
+  760  chmod +x .config/lxsession/LXDE-pi/autostart
+  761  ls -l .config/lxsession/LXDE-pi/autostart
+  762  ps axu
+  763  top
+  764  ls -lart
+  765  cat .xsession-errors
+  766  history 
+  767  cat .config/lxsession/LXDE-pi/autostart
+  768  bash /home/ucia/UCIA/UCIA_ObjectDetection/bin/start_object_detection.sh
+  770  cd UCIA/UCIA_ObjectDetection/
+  771  vim bin/start_object_detection.sh 
+  772  bash /home/ucia/UCIA/UCIA_ObjectDetection/bin/start_object_detection.sh
+  773  vim bin/start_object_detection.sh 
+  781  pip install PILasOPENCV
+  783  python inf_camera-3.py 
+  807  pip uninstall bbox-visualizer
+  819  vim .config/lxsession/LXDE-pi/autostart 
+  820  find /etc -name autostart
+  823  cat /etc/xdg/lxsession/LXDE-pi/autostart
+  824  cat .config/lxsession/LXDE-pi/autostart 
+  831  cat /home/ucia/.config/pcmanfm/LXDE-pi/pcmanfm.conf 
+  834  cat .config/lxsession/LXDE-pi/autostart 
+  835  grep start_object_detection ~/.cache/lxsession/LXDE-pi/run.log
+  836  vim .config/lxsession/LXDE-pi/autostart 
+  840  vim .config/lxsession/LXDE-pi/autostart 
+  843  cd .config/
+  845  mkdir autostart
+  846  ln -s ~/Desktop/DetectObj.desktop autostart/DetectObj.desktop
+  847  vim autostart/DetectObj.desktop
+  852  ./UCIA/UCIA_ObjectDetection/bin/start_object_detection.sh 
+  858  vim Desktop/DetectObj.desktop 
+  859  cd UCIA/UCIA_ObjectDetection/bin/
+  860  vimstart_object_detection.sh 
+  861  vim Desktop/DetectObj.desktop 
+  862  cd
+  863  vim Desktop/DetectObj.desktop 
+  868  Desktop/DetectObj.desktop 
+  946  sudo apt install gedit
+  947  gedit
+  948  cd UCIA/UCIA_ObjectDetection/
+  949  python inf_camera-1.py 
+  950  python inf_camera-1.py -m 7
+  951  python inf_camera-1.py -v V2 -m 7
+  952  python inf_camera-1.py -v V2.1 -m 7
+  953  python inf_camera-2.py -v V2.1 -m 7
+  954  python inf_camera-3.py -v V2.1 -m 7
+  955  cd UCIA/UCIA_ObjectDetection/
+ 1019  mkdir Thymio
+ 1020  cd Thymio/
+ 1021  git clone https://github.com/epfl-mobots/thymio-python.git
+ 1022  cd thymio-python/
+ 1027  python3 setup.py sdist bdist_wheel
+ 1028  python3 -m pip install dist/thymiodirect-0.1.2-py3-none-any.whl 
+ 1031  python demo_thymio.py 
+ 1036  python demo_thymio_UCIA.py 

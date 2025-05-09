@@ -1,0 +1,3 @@
+[submodule "RPi4_v3.0/ucia/Thymio/thymio-python"]
+	path = RPi4_v3.0/ucia/Thymio/thymio-python
+	url = https://github.com/epfl-mobots/thymio-python

@@ -1,0 +1,6 @@
+# accès réseau filaire + internet:
+sudo ifconfig eth0 up 192.168.1.17
+sudo ip route add default via 192.168.1.1 dev eth0
+
+# le fichier autostart pour lancer /home/ucia/UCIA/UCIA_ObjectDetection/bin/start_object_detection.sh:
+vim .config/lxsession/LXDE-pi/autostart
